@@ -1,0 +1,244 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <title>简易二手书购置系统</title>
+</head>
+<script>
+    function checkLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "admin") {
+            window.location.href = "administrator_page.html";
+        } else {
+            alert("您的用户名或密码输入错误，请您重新输入!");
+        }
+    }
+</script>
+
+<script>
+    //6位数 0-9 a-f A-F随机生成，内容必须是0-9 a-f A-F字符串，并且其中至少包含一个英文大写字母
+    window.onload = function () {
+        var res = getCode();//当页面加载的时候调用下面获取6位字符串的方法
+        document.getElementById('checkCode').innerText = res;//把它赋值给span显示
+
+        //获取6位字符串的方法
+        function getCode() {
+            //定义字符数组
+            var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'];
+            var str = '';//定义空的字符串，作为最终的结果接收它
+            for (var i = 0; i < 4; i++) {
+                var num = Math.round(Math.random() * (21 - 0) + 0);//0-21的随机数
+                str += arr[num];//通过产生的随机数来获取数组中的内容
+            }
+            //获得大写字母的方法
+            var num = Math.round(Math.random() * (21 - 16) + 16);//16-21的随机数
+            str += arr[num];//通过产生的随机数来获取数组中的内容
+            return str;//返回生成的随机数
+        }
+        //当点击连接换一张时调用方法重新生成6位字符串赋值给span
+        document.getElementById('linkbt').onclick = function () {
+            document.getElementById('checkCode').innerText = getCode();
+        }
+
+        //功能2：提交时进行验证输入是否正确
+        document.getElementById('Button1').onclick = function () {
+            var code = document.getElementById('checkCode').innerText;
+            var inputCode = document.getElementById('inputCode').value;
+            if (code != inputCode) {
+                alert('您输入的验证码不正确');
+                //让输入框为空，清空输入框
+                document.getElementById('inputCode').value = '';
+            }
+            else { alert('验证通过！请您继续输入管理员的账号密码'); }
+        }
+    }
+
+</script>
+
+<style>
+    .v_code {
+        width: 600px;
+        margin: 0 auto;
+
+    }
+
+    .v_code>input {
+        width: 60px;
+        height: 36px;
+        margin-top: 10px;
+
+    }
+
+    .code_show {
+        overflow: hidden;
+
+    }
+
+    .code_show span {
+        display: block;
+        float: left;
+        margin-bottom: 10px;
+
+    }
+
+    .code_show a {
+        display: block;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+
+    }
+
+    .code {
+        font-style: italic;
+        background-color: #f5f5f5;
+        color: blue;
+        font-size: 30px;
+        letter-spacing: 3px;
+        font-weight: bolder;
+        float: left;
+        cursor: pointer;
+        padding: 0 5px;
+
+    }
+
+    #inputCode {
+        width: 100px;
+        height: 30px;
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 12px;
+        color: #288bc4;
+        cursor: pointer;
+    }
+
+    a:hover {
+        text-decoration: underline;
+
+    }
+</style>
+
+<body>
+    <div class="top">
+        <div class="to">
+            <p>甜鱼二手书 你想要的都有</p>
+            <ul>
+                <li><a href="shoppingCart.html">购物车</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </div>
+        <div class="clearit"></div>
+    </div>
+
+    <div class="lg">
+        <div class="to">
+            <div class="logo"><img src="images/logo.jpg" /></div>
+            <div class="sou"><input name="" type="text" />
+                <p><a href="#">搜索</a></p>
+            </div>
+        </div>
+        <div class="clearit"></div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="highlyRecommended.html">优质二手</a></li>
+            <li><a href="classification.html">书籍分类</a></li>
+            <li><a href="updatingBooks.html">近期上新</a></li>
+        </ul>
+    </div>
+    <div class="nav" style=" background:#ffffff">
+        <div class="da">
+
+            <div class="ban"><img src="images/ban.jpg" width="1000" height="327" /></div>
+            <li><a href="login.html">用户登录</a></li>
+            <div class="hao">
+                <h2>管理员登录</h2>
+
+                <form>
+                    <br>
+                    <table width="400" border="0" style=" margin:0 auto">
+                        <tr>
+                            <td height="50" style=" border:1px solid #CCC"> <label for="username"></label>
+                                <input type="text" id="username" placeholder="请输入管理员账户名" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td height="50" style=" border:1px solid #CCC"> <label for="password"></label>
+                                <input type="password" id="password" placeholder="请输入密码" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex justify-content-center">
+
+                        <tr>
+                            <td>
+                                <p onclick="checkLogin()"
+                                    style=" width:200px; height:40px; background:#FF6700; margin:0 auto; text-align:center; line-height:40px; color:#FFF">
+                                    <a href="#" style=" color:#FFF; font-size:16px;">登录</a>
+                                </p>
+                            </td>
+                        </tr>
+            </div>
+            </tr>
+            </form>
+
+
+            <div class="v_code">
+                <div class="code_show">
+                    <span class="code" id="checkCode"></span>
+                    <a id="linkbt">换一张</a>
+                </div>
+
+                <div class="input_code">
+                    <label for="inputCode">人机验证：</label>
+                    <input type="text" id="inputCode" />
+                    <span id="text_show"></span>
+                </div>
+                <input id="Button1" type="button" value="确定" />
+            </div>
+
+
+
+
+</body>
+
+</html>
+</table>
+
+
+
+
+</div>
+
+
+
+<br>
+</div>
+
+<div class="foot">甜鱼二手书</div>
+</div>
+
+</body>
+
+</html>

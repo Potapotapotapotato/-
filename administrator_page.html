@@ -1,0 +1,222 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <title>简易二手书购置系统</title>
+</head>
+
+<body>
+    <div class="top">
+        <div class="to">
+            <p>甜鱼二手书 你想要的都在这儿</p>
+            <ul>
+
+            </ul>
+        </div>
+        <div class="clearit"></div>
+    </div>
+
+    <div class="lg">
+        <div class="to">
+            <div class="logo"><img src="images/logo.jpg" /></div>
+
+        </div>
+    </div>
+    <div class="clearit"></div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">返回首页</a></li>
+            <li><a href="administrator_page.html">图书信息</a></li>
+            <li><a href="guestManage.html">客户信息</a></li>
+            <li><a href="orderInAdministrator.html">订单信息</a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav">
+        <div class="da">
+
+            <div class="ban"><img src="images/ban.jpg" width="1000" height="327" /></div>
+            <div class="hao">
+                <h2>图书管理</h2>
+                <br>
+                <select id="orderType" style=" width:200px; height:40px;text-align:center;margin:0 auto;  ">
+                    <option value="group">全部</option>
+                    <option value="all">漫画类</option>
+                    <option value="regular">社科类</option>
+                    <option value="group">古籍类</option>
+                    <option value="group">技术类</option>
+                    <option value="group">艺术类</option>
+                    <option value="group">其他</option>
+
+                </select>
+                <button type="button" onclick="search()"
+                    style=" width:60px; height:40px;text-align:center;margin:0 auto;">搜索</button>
+                <ul>
+                    <a href="bookInformation.html">
+                        <li>
+                            <img src="images/img-1.jpg" width="140" height="190" />
+                            <br />进化心理学<br /><samp>[美] 戴维·巴斯 著</samp><br />
+                            <il>￥30.50 起</il>
+                            <br>
+                            <il>库存 100 本</il>
+
+                            <p
+                                style=" width:150px; height:30px; background:#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">增加库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">删除库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">修改价格</a>
+                            </p>
+                        </li>
+                    </a>
+                    <a href="bookInformation.html">
+                        <li>
+                            <img src="images/img-2.jpg" width="140" height="190" /><br />普林斯顿微积分读本<br /><samp> [美]
+                                阿德里安·班纳 著
+                            </samp><br />
+                            <il>￥40.00 </il><br>
+                            <il>库存 150 本</il>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">增加库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">删除库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">修改价格</a>
+                            </p>
+                        </li>
+                    </a>
+                    <a href="bookInformation.html">
+                        <li>
+                            <img src="images/img-3.jpg" width="140"
+                                height="190" /><br />汽车驾驶员培训教材<br /><samp>杭州市机动车服务管理局 编
+                            </samp><br />
+                            <il>￥10.00</il><br>
+                            <il>库存 80 本</il>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">增加库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">删除库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">修改价格</a>
+                            </p>
+                        </li>
+                    </a>
+                    <a href="bookInformation.html">
+                        <li>
+                            <img src="images/img-4.jpg" width="140" height="190" /><br />欲望的演化<br /><samp>[美] 戴维·巴斯
+                                著</samp><br />
+                            <il>￥21.00</il>
+                            <br>
+                            <il>库存 200 本</il>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">增加库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">删除库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">修改价格</a>
+                            </p>
+                        </li>
+                    </a>
+                    <a href="bookInformation.html">
+                        <li>
+                            <img src="images/img-5.jpg" width="140" height="190" /><br />爱的博弈<br /><samp> [美]
+                                约翰·戈特曼 / 娜恩·希尔弗 著
+                            </samp>
+                            <il>￥22.50</il>
+                            <br>
+                            <il>库存 100 本</il>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">增加库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">删除库存</a>
+                            </p>
+                            <br>
+                            <p
+                                style=" width:150px; height:30px; background:	#FF6700; margin:0 auto; text-align:center; line-height:31px; color:#FFF">
+                                <a href="#" style=" color:#FFF; font-size:14px;">修改价格</a>
+                            </p>
+                        </li>
+
+
+
+                    </a>
+
+                    </li></a>
+                </ul>
+                <div class="clearit"></div>
+            </div>
+            <br>
+            <tr>
+                <td>
+                    <p
+                        style=" width:200px; height:40px; background:#228c85; margin:0 auto; text-align:center; line-height:40px; color:#FFF">
+                        <a href="#" style=" color:#FFF; font-size:16px;">上一页</a>
+                    </p>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <p
+                        style=" width:200px; height:40px; background:#228c85; margin:0 auto; text-align:center; line-height:40px; color:#FFF">
+                        <a href="#" style=" color:#FFF; font-size:16px;">下一页</a>
+                    </p>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <p
+                        style=" width:200px; height:40px; background:#228c85; margin:0 auto; text-align:center; line-height:40px; color:#FFF">
+                        <a href="#" style=" color:#FFF; font-size:16px;">提交</a>
+                    </p>
+                </td>
+            </tr>
+            <br>
+
+
+
+
+            <div class="foot">甜鱼二手书</div>
+        </div>
+</body>
+
+</html>
